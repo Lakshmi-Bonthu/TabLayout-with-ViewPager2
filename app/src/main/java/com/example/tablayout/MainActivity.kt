@@ -1,49 +1,4 @@
-//package com.example.tablayout
-//
-//import android.os.Bundle
-//import androidx.activity.enableEdgeToEdge
-//import androidx.appcompat.app.AppCompatActivity
-//import androidx.core.view.ViewCompat
-//import androidx.core.view.WindowInsetsCompat
-//import androidx.fragment.app.FragmentManager
-//import androidx.viewpager2.widget.ViewPager2
-//import com.google.android.material.tabs.TabLayout
-//import com.google.android.material.tabs.TabLayoutMediator
-//
-//class MainActivity : AppCompatActivity() {
-//    lateinit var tab_layout:TabLayout
-//    lateinit var view:ViewPager2
-//    lateinit var adapter:FragmentManager
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        setContentView(R.layout.activity_main)
-//
-//        tab_layout=findViewById(R.id.tab_layout)
-//        view=findViewById(R.id.view)
-//
-//        adapter=myViewAdapter(supportFragmentManager, lifecycle )
-//        view.adapter=adapter
-//        TabLayoutMediator(tab_layout,view){tab,position->
-//            when(position){
-//                0->{
-//                    tab.text="First"
-//                }
-//                1->{
-//                    tab.text="Second"
-//
-//                }
-//                2->{
-//                    tab.text="Third"
-//                }
-//
-//            }
-//        }.attach()
-//
-//
-//
-//    }
-//}
+
 package com.example.tablayout
 
 import android.os.Bundle
@@ -64,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         tab_layout = findViewById(R.id.tab_layout)
         view = findViewById(R.id.view)
 
-        // Corrected: Using the proper adapter (myViewAdapter)
+        // setting viewpager to adapter
         adapter = myViewAdapter(supportFragmentManager, lifecycle)
         view.adapter = adapter
 

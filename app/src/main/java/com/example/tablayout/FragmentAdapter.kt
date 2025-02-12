@@ -8,17 +8,17 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class myViewAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
-    // Define how many pages you have in the ViewPager2
+    // Define  pages  have in the ViewPager2
     override fun getItemCount(): Int {
-        return 3  // 3 tabs (for First, Second, Third)
+        return 3
     }
 
     // Create the fragment for a given position
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> FirstFragment()  // Fragment for the first tab
-            1 -> SecondFragment()  // Fragment for the second tab
-            2 -> ThirdFragment()  // Fragment for the third tab
+            0 -> FirstFragment()
+            1 -> SecondFragment()
+            2 -> ThirdFragment()
             else -> FirstFragment() // Default to the first fragment
         }
     }
